@@ -24,9 +24,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
 
 
-num_classes = 47
-batch_size = 16
-epochs = 100
+
 
 
 def one_class_per_image():
@@ -329,8 +327,12 @@ def semantic_seg_unet():
     
 if __name__ == "__main__":
     
-    one_class_per_image()
-    # semantic_seg_no_downsampling()
+    num_classes = 47
+    batch_size = 16
+    epochs = 100
+    
+    # one_class_per_image()
+    semantic_seg_no_downsampling()
     # semantic_seg_downsampling()
     # semantic_seg_unet()
 
